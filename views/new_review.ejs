@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Nueva reseña</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav>
+      <a class="btn-outline" href="/reviews">Volver</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Nueva reseña</h1>
+    <form class="form" action="/reviews" method="post">
+      <div class="field">
+        <label for="animeId">Anime</label>
+        <select id="animeId" name="animeId" required>
+          <option value="">— Selecciona anime —</option>
+          <% animes.forEach(a => { %>
+            <option value="<%= a.id %>" <%= String(defaultAnimeId||'')===String(a.id)?'selected':'' %>><%= a.title %></option>
+          <% }) %>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="title">Título</label>
+        <input id="title" name="title" required placeholder="Ej. Obra maestra del shōnen" />
+      </div>
+
+      <div class="field">
+        <label for="author">Autor</label>
+        <input id="author" name="author" placeholder="Tu nombre o nick" />
+      </div>
+
+      <div class="field">
+        <label for="rating">Puntuación (0–10)</label>
+        <input id="rating" name="rating" type="number" min="0" max="10" value="8" />
+      </div>
+
+      <div class="field">
+        <label for="content">Contenido</label>
+        <textarea id="content" name="content" rows="5" placeholder="Escribe tu opinión..."></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">✨ Crear reseña</button>
+        <a class="btn-outline" href="/reviews">Cancelar</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

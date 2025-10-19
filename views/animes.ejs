@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Animes Shōnen</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav>
+      <a href="/animes/new" class="btn">Añadir anime</a>
+      <a href="/login" class="btn btn-outline">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Animes</h1>
+
+    <form class="search" method="get">
+      <input type="text" name="q" placeholder="Buscar por título, estudio, estado o género..." value="<%= q || '' %>" />
+      <button class="btn">Buscar</button>
+    </form>
+
+    <section class="grid">
+      <% animes.forEach(a => { %>
+        <article class="card">
+          <a class="card-cover" href="/animes/<%= a.id %>">
+            <img src="<%= a.imageUrl || 'https://placehold.co/480x270' %>" alt="<%= a.title %>" />
+          </a>
+          <div class="card-body">
+            <h3 class="card-title"><a href="/animes/<%= a.id %>"><%= a.title %></a></h3>
+            <p class="muted"><%= a.studio %> · <%= a.status %> · <%= a.episodes %> eps</p>
+            <div class="tags">
+              <% (a.genres || []).forEach(g => { %><span class="tag"><%= g %></span><% }) %>
+            </div>
+          </div>
+        </article>
+      <% }) %>
+      <% if (!animes.length) { %>
+        <p class="muted">No hay resultados.</p>
+      <% } %>
+    </section>
+  </main>
+</body>
+</html>

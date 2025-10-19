@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Editar reseña</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav>
+      <a class="btn-outline" href="/reviews/<%= review.id %>">Volver</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Editar reseña</h1>
+    <form class="form" action="/reviews/<%= review.id %>?_method=PUT" method="post">
+      <div class="field">
+        <label for="animeId">Anime</label>
+        <select id="animeId" name="animeId" required>
+          <% animes.forEach(a => { %>
+            <option value="<%= a.id %>" <%= Number(review.animeId)===Number(a.id)?'selected':'' %>><%= a.title %></option>
+          <% }) %>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="title">Título</label>
+        <input id="title" name="title" required value="<%= review.title %>" />
+      </div>
+
+      <div class="field">
+        <label for="author">Autor</label>
+        <input id="author" name="author" value="<%= review.author %>" />
+      </div>
+
+      <div class="field">
+        <label for="rating">Puntuación (0–10)</label>
+        <input id="rating" name="rating" type="number" min="0" max="10" value="<%= review.rating %>" />
+      </div>
+
+      <div class="field">
+        <label for="content">Contenido</label>
+        <textarea id="content" name="content" rows="5"><%= review.content %></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">💾 Guardar</button>
+        <a class="btn-outline" href="/reviews/<%= review.id %>">Cancelar</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

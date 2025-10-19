@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Añadir nuevo anime · Anime Shōnen</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav>
+      <a href="/animes" class="btn-outline">Volver al listado</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Añadir nuevo anime</h1>
+    <p class="muted">Completa la información del anime que quieras añadir a la base de datos.</p>
+
+    <form class="form" action="/animes" method="post">
+      <div class="field">
+        <label for="title">Título</label>
+        <input id="title" name="title" required placeholder="Ej. One Piece, Bleach..." />
+      </div>
+
+      <div class="field">
+        <label for="studio">Estudio</label>
+        <input id="studio" name="studio" placeholder="Ej. Toei Animation, MAPPA..." />
+      </div>
+
+      <div class="field">
+        <label for="episodes">Número de episodios</label>
+        <input id="episodes" type="number" name="episodes" min="0" placeholder="Ej. 1100" />
+      </div>
+
+      <div class="field">
+        <label for="status">Estado</label>
+        <select id="status" name="status">
+          <option value="En emisión">En emisión</option>
+          <option value="Finalizado">Finalizado</option>
+          <option value="En pausa">En pausa</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="year">Año de lanzamiento</label>
+        <input id="year" type="number" name="year" min="1900" max="2100" placeholder="Ej. 1999" />
+      </div>
+
+      <div class="field">
+        <label for="genres">Géneros (separados por comas)</label>
+        <input id="genres" name="genres" placeholder="Acción, Aventura, Shōnen..." />
+      </div>
+
+      <div class="field">
+        <label for="imageUrl">Imagen (URL)</label>
+        <input id="imageUrl" name="imageUrl" placeholder="https://..." />
+      </div>
+
+      <div class="field">
+        <label for="synopsis">Sinopsis</label>
+        <textarea id="synopsis" name="synopsis" rows="5" placeholder="Describe brevemente de qué trata el anime..."></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">✨ Crear anime</button>
+        <a href="/animes" class="btn-outline">Cancelar</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

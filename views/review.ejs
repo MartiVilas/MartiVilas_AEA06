@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title><%= review.title %> · Reseña</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav>
+      <a class="btn-outline" href="/reviews">Volver</a>
+      <a class="btn-outline" href="/reviews/<%= review.id %>/edit">Editar</a>
+      <form action="/reviews/<%= review.id %>?_method=DELETE" method="post" style="display:inline;">
+        <button class="btn-danger" onclick="return confirm('¿Eliminar reseña?')">Eliminar</button>
+      </form>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="detail">
+      <div class="detail-body">
+        <h1 class="page-title"><%= review.title %></h1>
+        <p class="muted">
+          Anime: <strong><%= anime?.title || ('#'+review.animeId) %></strong> ·
+          Autor: <strong><%= review.author || 'Anónimo' %></strong> ·
+          Puntuación: <strong><%= review.rating %>/10</strong><br/>
+          Fecha: <%= new Date(review.createdAt).toLocaleString() %>
+        </p>
+        <p><%= review.content %></p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title><%= anime.title %> · Anime Shōnen</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav>
+      <a class="btn-outline" href="/animes">Volver</a>
+      <a class="btn-outline" href="/animes/<%= anime.id %>/edit">Editar</a>
+      <form action="/animes/<%= anime.id %>?_method=DELETE" method="post" style="display:inline;">
+        <button class="btn-danger" onclick="return confirm('¿Eliminar anime?')">Eliminar</button>
+      </form>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="detail">
+      <div class="detail-media">
+        <img src="<%= anime.imageUrl || 'https://placehold.co/640x360' %>" alt="<%= anime.title %>" />
+      </div>
+
+      <div class="detail-body">
+        <h1 class="page-title"><%= anime.title %></h1>
+
+        <p class="muted">
+          <strong>Estudio:</strong> <%= anime.studio %> · 
+          <strong>Año:</strong> <%= anime.year || 'N/D' %><br>
+          <strong>Estado:</strong> <%= anime.status %> · 
+          <strong>Episodios:</strong> <%= anime.episodes %>
+        </p>
+
+        <div class="tags">
+          <% (anime.genres || []).forEach(g => { %>
+            <span class="tag"><%= g %></span>
+          <% }) %>
+        </div>
+
+        <p><%= anime.synopsis %></p>
+
+        <!-- Enlaces a reseñas -->
+        <div class="actions mt-3">
+          <a class="btn-outline" href="/reviews?animeId=<%= anime.id %>">Ver reseñas</a>
+          <a class="btn" href="/reviews/new?animeId=<%= anime.id %>">Añadir reseña</a>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

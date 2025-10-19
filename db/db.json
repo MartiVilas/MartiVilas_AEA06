@@ -1,0 +1,147 @@
+{
+  "animes": [
+    {
+      "id": 1,
+      "title": "One Piece",
+      "studio": "Toei Animation",
+      "episodes": 1100,
+      "status": "En emisión",
+      "year": 1999,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Shōnen"
+      ],
+      "synopsis": "Luffy sueña con convertirse en el Rey de los Piratas y encontrar el One Piece.",
+      "imageUrl": "https://i.imgur.com/ZmYD4Uo.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Bleach",
+      "studio": "Studio Pierrot",
+      "episodes": 379,
+      "status": "Finalizado",
+      "year": 2004,
+      "genres": [
+        "Acción",
+        "Sobrenatural",
+        "Shōnen"
+      ],
+      "synopsis": "Ichigo Kurosaki se convierte en shinigami sustituto tras conocer a Rukia.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Black Clover",
+      "studio": "Studio Pierrot",
+      "episodes": 170,
+      "status": "En pausa",
+      "year": 2017,
+      "genres": [
+        "Acción",
+        "Magia",
+        "Shōnen"
+      ],
+      "synopsis": "Asta y Yuno compiten por ser el Rey Mago en un mundo donde la magia lo es todo.",
+      "imageUrl": "https://i0.wp.com/elpalomitron.com/wp-content/uploads/2017/11/critica-black-clover-principal-el-palomitron.jpg?resize=1100%2C600&ssl=1"
+    },
+    {
+      "id": 4,
+      "title": "Jujutsu Kaisen",
+      "studio": "MAPPA",
+      "episodes": 47,
+      "status": "En emisión",
+      "year": 2020,
+      "genres": [
+        "Acción",
+        "Oscuro",
+        "Shōnen"
+      ],
+      "synopsis": "Itadori Yuji alberga el dedo de Sukuna y se une a la Escuela de Hechicería.",
+      "imageUrl": "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2023/11/08/imagen-promocional-de-jujutsu-kaisen.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Los diarios de la boticaria",
+      "studio": "OLM ",
+      "episodes": 50,
+      "status": "En emisión",
+      "year": 2022,
+      "genres": [
+        "Drama",
+        "Romance",
+        "Misterio"
+      ],
+      "synopsis": "Maomao es una criada del palacio imperial, en la Edad Media. Solía trabajar como herbolaria en el barrio del placer, pero cuando oye el rumor de que todos los hijos del emperador tienen vidas cortas, incitada por su curiosidad innata y su ansia de saber, empieza a investigar las causas y, así, empieza la historia.\r\n",
+      "imageUrl": "https://ramenparados.com/wp-content/uploads/2024/01/BoticariaAN00-1000x600-1704456644-1.jpg"
+    },
+    {
+      "id": 6,
+      "title": "My Hero Academy",
+      "studio": "Bones",
+      "episodes": 430,
+      "status": "En emisión",
+      "year": 2016,
+      "genres": [
+        "Aventura",
+        "Ciencia",
+        "Fantasia"
+      ],
+      "synopsis": "\r\nMY HERO ACADEMIA narra la historia de Izuku Midoriya (al que pone voz Justin Briner), un chico que nace sin ninguna peculiaridad y sueña con convertirse en el mayor héroe del mundo. Tras un encuentro casual con su ídolo, All Might (al que pone voz. Afortunadamente, ¡hay una escuela para eso!",
+      "imageUrl": "https://i.redd.it/7xcq3bzahjq91.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Gachiakuta",
+      "studio": "\tBones Film",
+      "episodes": 24,
+      "status": "En emisión",
+      "year": 2025,
+      "genres": [
+        "Acción",
+        "Aventura",
+        "Shōnen"
+      ],
+      "synopsis": "Rudo es un joven que sufre una tremenda discriminación y se dedica a hurgar en la basura. Habita en una barriada, hogar de los descendientes de los delincuentes de la ciudad. Un día, es acusado de un delito que no ha cometido y lo arrojan al temido Abismo.",
+      "imageUrl": "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/21f44d6dc9e72efa86dc75f0860376c5.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "animeId": 1,
+      "author": "ZoroFan97",
+      "rating": 10,
+      "title": "El viaje definitivo del shōnen",
+      "content": "One Piece no es solo una serie, es una experiencia. La construcción del mundo, la evolución de los personajes y los momentos épicos la convierten en una obra maestra del género. Luffy es el espíritu de la aventura en su forma más pura.",
+      "createdAt": "2025-10-19T15:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "animeId": 2,
+      "author": "SoulReaperX",
+      "rating": 9,
+      "title": "Acción sobrenatural con corazón",
+      "content": "Bleach tiene uno de los mejores conceptos del shōnen clásico: shinigamis, espadas y batallas espectaculares. Aunque tiene altibajos, la saga de la Sociedad de Almas y el arco final lo consolidan como un imprescindible.",
+      "createdAt": "2025-10-19T15:05:00.000Z"
+    },
+    {
+      "id": 3,
+      "animeId": 3,
+      "author": "MagicKnight",
+      "rating": 8,
+      "title": "Superación mágica al estilo clásico",
+      "content": "Black Clover es pura energía. Asta es el típico protagonista que compensa su falta de talento con determinación brutal. La animación mejora muchísimo con los arcos posteriores y las batallas son espectaculares.",
+      "createdAt": "2025-10-19T15:10:00.000Z"
+    },
+    {
+      "id": 4,
+      "animeId": 4,
+      "author": "GojoSupreme",
+      "rating": 9,
+      "title": "Oscuridad, técnica y emoción",
+      "content": "Jujutsu Kaisen es el shōnen moderno por excelencia. Combina acción intensa, coreografías brutales y una narrativa emocionalmente potente. Sukuna y Gojo son dos de los personajes más carismáticos del anime actual.",
+      "createdAt": "2025-10-19T15:15:00.000Z"
+    }
+  ]
+}

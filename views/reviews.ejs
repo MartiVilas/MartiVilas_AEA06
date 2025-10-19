@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Reseñas · Anime Shōnen</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav>
+      <a class="btn-outline" href="/animes">Animes</a>
+      <a class="btn" href="/reviews/new">Nueva reseña</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Reseñas</h1>
+
+    <form class="search" method="get">
+      <input type="text" name="q" placeholder="Buscar por título de reseña o autor..." value="<%= q || '' %>" />
+      <select name="animeId">
+        <option value="">— Filtrar por anime —</option>
+        <% animes.forEach(a => { %>
+          <option value="<%= a.id %>" <%= String(animeId||'')===String(a.id)?'selected':'' %>><%= a.title %></option>
+        <% }) %>
+      </select>
+      <button class="btn">Buscar</button>
+    </form>
+
+    <section class="grid">
+      <% reviews.forEach(r => { %>
+        <article class="card">
+          <div class="card-body">
+            <h3 class="card-title"><a href="/reviews/<%= r.id %>"><%= r.title %></a></h3>
+            <p class="muted">Autor: <%= r.author || 'Anónimo' %> · Puntuación: <strong><%= r.rating %>/10</strong></p>
+            <div class="tags">
+              <span class="tag">ID Anime: <%= r.animeId %></span>
+              <span class="tag"><%= new Date(r.createdAt).toLocaleString() %></span>
+            </div>
+          </div>
+        </article>
+      <% }) %>
+      <% if (!reviews.length) { %>
+        <p class="muted">No hay reseñas para los filtros aplicados.</p>
+      <% } %>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Editar anime</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/protected">ANIME SHŌNEN</a>
+    <nav><a href="/animes/<%= anime.id %>" class="btn">Volver</a></nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Editar anime</h1>
+    <form class="form" action="/animes/<%= anime.id %>?_method=PUT" method="post">
+      <div class="field"><label>Título</label><input name="title" required value="<%= anime.title %>" /></div>
+      <div class="field"><label>Estudio</label><input name="studio" value="<%= anime.studio %>" /></div>
+      <div class="field"><label>Episodios</label><input type="number" name="episodes" min="0" value="<%= anime.episodes %>" /></div>
+      <div class="field"><label>Estado</label><input name="status" value="<%= anime.status %>" /></div>
+      <div class="field"><label>Año</label><input type="number" name="year" min="1900" max="2100" value="<%= anime.year %>" /></div>
+      <div class="field"><label>Géneros (coma separados)</label><input name="genres" value="<%= (anime.genres || []).join(', ') %>" /></div>
+      <div class="field"><label>Imagen (URL)</label><input name="imageUrl" value="<%= anime.imageUrl %>" /></div>
+      <div class="field"><label>Sinopsis</label><textarea name="synopsis" rows="4"><%= anime.synopsis %></textarea></div>
+      <button class="btn">Guardar</button>
+    </form>
+  </main>
+</body>
+</html>

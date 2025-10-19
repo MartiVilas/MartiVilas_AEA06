@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Animes </title>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/cloud.png" type="image/png" sizes="32x32">
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="brand" href="/protected">ANIME SHŌNEN</a>
+      <nav>
+        <a href="/animes" class="btn-outline">Ver animes</a>
+        <a href="/animes/new" class="btn">Añadir anime</a>
+        <form action="/logout" method="post" style="display: inline">
+          <button class="btn-danger">Salir</button>
+        </form>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-body">
+          <h1>Bienvenido<% if (username) { %>, <%= username %><% } %> 👋</h1>
+          <p class="muted">
+            Gestiona tu catálogo Shōnen: crea, edita y elimina animes
+            fácilmente.
+          </p>
+          <div class="actions">
+            <a class="btn" href="/animes">Entrar al listado</a>
+            <a class="btn-outline" href="/animes/new">Añadir un anime</a>
+          </div>
+        </div>
+
+        <% if (typeof lastAnime !== 'undefined' && lastAnime) { %>
+        <a class="hero-feature" href="/animes/<%= lastAnime.id %>">
+          <img
+            src="<%= lastAnime.imageUrl || 'https://placehold.co/900x600'%>"
+            alt="<%= lastAnime.title %>"
+          />
+          <div class="hero-feature__info">
+            <span class="badge">Último añadido</span>
+            <h3><%= lastAnime.title %></h3>
+            <p><%= (lastAnime.genres || []).join(' · ') %></p>
+          </div>
+        </a>
+        <% } else { %>
+        <div class="hero-art"></div>
+        <% } %>
+      </section>
+
+      <!-- Tarjetas rápidas -->
+      <section class="grid" style="margin-top: 24px">
+        <article class="card">
+          <a class="card-cover" href="/animes">
+            <!-- Imagen para LISTADO -->
+            <img
+              src="https://i.pinimg.com/originals/b7/80/cf/b780cf63f2c0402fea2a76c0322c99a1.jpg"
+              alt="Listado de animes"
+            />
+          </a>
+          <div class="card-body">
+            <h3 class="card-title"><a href="/animes">Listado de animes</a></h3>
+            <p class="muted">Busca por título, estudio, estado o género.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="card-cover" href="/animes/new">
+            <!-- Imagen para AÑADIR -->
+            <img
+              src="https://img.freepik.com/foto-gratis/paisaje-oriental-anime_23-2151974992.jpg?w=360"
+              alt="Añadir anime"
+            />
+          </a>
+          <div class="card-body">
+            <h3 class="card-title"><a href="/animes/new">Añadir anime</a></h3>
+            <p class="muted">Título, estudio, episodios, géneros y sinopsis.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
