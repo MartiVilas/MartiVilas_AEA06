@@ -1,0 +1,58 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+*.log.*
+log/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage / testing
+coverage/
+.nyc_output/
+
+# Build outputs (si en algún momento compilas algo)
+dist/
+build/
+.tmp/
+.temp/
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Cache
+.cache/
+.eslintcache
+.parcel-cache/
+
+# HTTP client env (REST Client)
+.http
+*.http.res
+
+# Datos locales (ajusta según lo que quieras versionar)
+db/*.db
+db/*.sqlite
+db/*.sqlite3
+db/*.json
+!db/seed*.json  # si quieres mantener semillas de ejemplo
+
+# EJS views compiladas (normalmente no aplica, pero por si acaso)
+*.ejs~
