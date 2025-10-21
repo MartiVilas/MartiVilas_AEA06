@@ -104,6 +104,36 @@
       ],
       "synopsis": "Rudo es un joven que sufre una tremenda discriminación y se dedica a hurgar en la basura. Habita en una barriada, hogar de los descendientes de los delincuentes de la ciudad. Un día, es acusado de un delito que no ha cometido y lo arrojan al temido Abismo.",
       "imageUrl": "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/21f44d6dc9e72efa86dc75f0860376c5.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Inazuma Eleven",
+      "studio": "OLM",
+      "episodes": 127,
+      "status": "Finalizado",
+      "year": 2008,
+      "genres": [
+        "Deportes",
+        "Futbol",
+        "Fantastico"
+      ],
+      "synopsis": "Inazuma Eleven es una serie de anime y videojuegos sobre un joven portero llamado Mark Evans (Endou Mamoru) que busca revitalizar el deslucido equipo de fútbol de su escuela para competir en el torneo nacional \"Fútbol Frontier\". A medida que recluta nuevos jugadores, se enfrenta a rivales poderosos y descubre una conspiración malvada que amenaza al mundo del fútbol, viéndose obligado a llevar al equipo a enfrentarse a los mejores equipos de Japón y del mundo",
+      "imageUrl": "https://image.jimcdn.com/app/cms/image/transf/none/path/s75ac51c6029ba667/image/i010acc7c3a743d66/version/1355609087/image.jpg"
+    },
+    {
+      "id": 9,
+      "title": "HxH",
+      "studio": "Nippon Animation",
+      "episodes": 148,
+      "status": "En pausa",
+      "year": 1999,
+      "genres": [
+        "Accion",
+        "Aventura",
+        "Ficcion"
+      ],
+      "synopsis": "Hunter x Hunter trata sobre Gon Freecss, un niño que decide convertirse en \"cazador\" profesional para poder encontrar a su padre, quien es un legendario cazador. La historia sigue su viaje mientras se enfrenta al riguroso y peligroso Examen de Cazador y, junto a sus nuevos amigos (Kurapika, Leorio y Killua), vive una serie de aventuras llenas de peligros y desafíos. ",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BYzYxOTlkYzctNGY2MC00MjNjLWIxOWMtY2QwYjcxZWIwMmEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     }
   ],
   "reviews": [
@@ -142,6 +172,15 @@
       "title": "Oscuridad, técnica y emoción",
       "content": "Jujutsu Kaisen es el shōnen moderno por excelencia. Combina acción intensa, coreografías brutales y una narrativa emocionalmente potente. Sukuna y Gojo son dos de los personajes más carismáticos del anime actual.",
       "createdAt": "2025-10-19T15:15:00.000Z"
+    },
+    {
+      "id": 5,
+      "animeId": 9,
+      "author": "HunterFan",
+      "rating": 8,
+      "title": "TOP",
+      "content": "Este anime es una obra maestra",
+      "createdAt": "2025-10-21T15:07:47.013Z"
     }
   ]
 }
